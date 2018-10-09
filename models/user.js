@@ -11,9 +11,9 @@ var userSchema = new Schema({
 const User = module.exports = mongoose.model('User', userSchema)
 
 module.exports.create = function (user, callback) {
-    return User.create(user, callback)
+    User.create(user, callback)
 }
 
 module.exports.getAll = function (callback) {
-    return User.find({}, callback)
+    User.find({}, callback)
 }
